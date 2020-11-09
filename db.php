@@ -6,7 +6,7 @@ function showerror($db)
 mysqli_error($db));
 }
 $hostname = "10.10.23.183";
-$db_name = "db_a12345";
+$db_name = "db_a61088";
 $db_user = "a61088";
 $db_passwd = "ngoo4d";
 // faz uma conexão a uma base de dados
