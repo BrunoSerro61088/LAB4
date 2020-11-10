@@ -1,9 +1,9 @@
 <?php
 // mostra uma mensagem de erro vinda do mysql
-function showerror($db)
+function showerror()
 {
- die("Error " . mysqli_errno($db) . " : " .
-mysqli_error($db));
+ die("Error " . mysqli_errno() . " : " .
+mysqli_error());
 }
 $hostname = "10.10.23.183";
 $db_name = "db_a61088";
