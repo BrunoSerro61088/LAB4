@@ -11,7 +11,7 @@ $smarty->cache_dir = 'cache';
 $smarty->config_dir = 'configs';
 
 // ligação à base de dados
-$db = dbconnect($hostname,$db_user,$db_passwd,$db_name);
+$db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db) {
   // criar query numa string
   $query  = "SELECT microposts.title, microposts.content, microposts.created_at, microposts.updated_at, users.name
