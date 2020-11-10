@@ -33,7 +33,7 @@ if($db) {
   $smarty->assign('Menu0',"home");
   $smarty->assign('Menu1',"logout");
   $smarty->assign('Menu2',"post");
-  $smarty->assign('Welcome',"welcome");
+  $smarty->assign('Welcome',"Welcome Bruno Serro");
 
   // Mostra a tabela
   $smarty->display('templates/index_template.tpl');
