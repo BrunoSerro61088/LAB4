@@ -20,7 +20,7 @@ if($db) {
 			 ORDER BY microposts.created_at DESC";
   // executar a query
   if(!($result = @ mysql_query($query,$db )))
-   showerror();
+   showerror($db);
 
 
   // vai buscar o resultado da query
