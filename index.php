@@ -14,13 +14,13 @@ $smarty->config_dir = 'configs';
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db) {
   // criar query numa string
-  $query  = "SELECT microposts.title, microposts.content, microposts.created_at, microposts.updated_at, users.name
+  string $query  = "SELECT microposts.title, microposts.content, microposts.created_at, microposts.updated_at, users.name
 			 FROM microposts, users
 			 WHERE microposts.user_id = users.id
 			 ORDER BY microposts.created_at DESC";
       
   // executar a query
-  if(!($result = @ mysql_query($query,$db )))
+  if(!($result = @ mysql_query($db, $query)))
   {
    showerror($db);
   }
