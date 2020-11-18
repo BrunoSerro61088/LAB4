@@ -28,10 +28,10 @@ if($db) {
 
 
   // vai buscar o resultado da query
-  $nrows  = mysqli_num_rows(result);
+  $nrows  = mysqli_num_rows($result);
    for($i=0; $i<$nrows; $i++)
    {
-     $tuple[$i] = mysqli_fetch_array(result,MYSQLI_BOTH);
+     $tuple[$i] = mysqli_fetch_array($result,MYSQLI_BOTH);
    }
  
   // faz a atribuição das variáveis do template smarty
