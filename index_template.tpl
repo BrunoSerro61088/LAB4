@@ -97,20 +97,20 @@
   <div class="col-sm-3">
     <div class="card border-dark">
       <div class="card-header bg-dark text-white">    
-        <h5 class="text-center">{$Post.name}</h5>
+        <h5 class="text-center">{$post.name}</h5>
       </div>
         <div class="card-body">
           <p>updated:</p>
-          <p>{$Post.updated_at}</p>
+          <p>{$post.updated_at}</p>
           <p>created:</p>
-          <p>{$Post.created_at}</p>
+          <p>{$post.created_at}</p>
           <p><a class="link" href="#">Update post</a></p>
         </div>
     </div>
   </div>
   <div class="col-sm-9">
-   <p><h3>{$Post.title}</h3></p>
-   <p><h5>{$Post.content}</h5></p>
+   <p><h3>{$post.title}</h3></p>
+   <p><h5>{$post.content}</h5></p>
   </div>
 </div>
 </div>
