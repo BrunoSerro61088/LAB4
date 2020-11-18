@@ -20,7 +20,7 @@ if($db) {
 			 ORDER BY microposts.created_at DESC";
       
   // executar a query
-  if(!($result = @ mysqli_query($query,$db)))
+  if(!($result = @ mysql_query($query,$db)))
   {
    showerror($db);
   }
@@ -28,10 +28,10 @@ if($db) {
 
 
   // vai buscar o resultado da query
-  $nrows  = mysqli_num_rows($result);
+  $nrows  = mysql_num_rows($result);
    for($i=0; $i<$nrows; $i++)
    {
-     $tuple[$i] = mysqli_fetch_array($result,MYSQL_ASSOC);
+     $tuple[$i] = mysql_fetch_array($result,MYSQL_ASSOC);
    }
  
   // faz a atribuição das variáveis do template smarty
@@ -45,7 +45,7 @@ if($db) {
   $smarty->display('templates_c/index_template.tpl');
   
   // fechar a ligação à base de dados
-  mysqli_close($db);
+  mysql_close($db);
 } // end if
 
 
