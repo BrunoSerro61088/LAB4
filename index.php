@@ -22,7 +22,7 @@ if($db) {
   // executar a query
   if(!($result = @ mysql_query($query,$db )))
   {
-   showerror();
+   showerror($db);
   }
   
 
