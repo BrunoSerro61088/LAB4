@@ -18,9 +18,10 @@ if($db) {
 			 FROM microposts, users
 			 WHERE microposts.user_id = users.id
 			 ORDER BY microposts.created_at DESC";
-      
-  // executar a query
-  if(($result = @ mysql_query($query,$db)))
+
+  $result = @ mysql_query($query,$db);
+
+  if(!$result)
   {
    showerror($db);
   }
