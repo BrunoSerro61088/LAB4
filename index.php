@@ -18,18 +18,21 @@ if($db) {
 			 FROM microposts, users
 			 WHERE microposts.user_id = users.id
 			 ORDER BY microposts.created_at DESC";
-      }
+      
   // executar a query
   if(!($result = @ mysql_query($query,$db )))
   {
    showerror($db);
   }
+  
 
 
   // vai buscar o resultado da query
   $nrows  = mysql_num_rows($result);
    for($i=0; $i<$nrows; $i++)
+   {
      $tuple[$i] = mysql_fetch_array($result,MYSQL_ASSOC);
+   }
  
   // faz a atribuição das variáveis do template smarty
   $smarty->assign('Post',$tuple);
