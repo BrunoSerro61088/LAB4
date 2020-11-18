@@ -42,7 +42,7 @@ if($db) {
   $smarty->assign('Welcome',"Welcome Bruno Serro");
 
   // Mostra a tabela
-  $smarty->display('templates/index_template.tpl');
+  $smarty->display('templates_c/index_template.tpl');
   
   // fechar a ligação à base de dados
   mysql_close($db);
