@@ -31,7 +31,7 @@ if($db) {
   $nrows  = mysqli_num_rows($result);
    for($i=0; $i<$nrows; $i++)
    {
-     $tuple[$i] = mysqli_fetch_array($result,MYSQL_ASSOC);
+     $tuple[$i] = mysqli_fetch_array($result,MYSQLI_ASSOC);
    }
  
   // faz a atribuição das variáveis do template smarty
