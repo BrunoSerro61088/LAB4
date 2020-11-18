@@ -2,7 +2,7 @@
 
 include 'db.php';
 // put full path to Smarty.class.php
-require('/usr/share/php/smarty/libs/Smarty.class.php');
+require_once('/usr/share/php/smarty/libs/Smarty.class.php');
 $smarty = new Smarty();
 
 $smarty->template_dir = 'templates';
