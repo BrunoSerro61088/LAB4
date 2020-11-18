@@ -21,7 +21,7 @@ if($db) {
 
   $result = @ mysql_query($query,$db);
 
-  if(!$result)
+  if(!=$result)
   {
    showerror($db);
   }
