@@ -7,8 +7,6 @@ $smarty = new Smarty();
 
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
-$smarty->cache_dir = 'cache';
-$smarty->config_dir = 'configs';
 
 // ligação à base de dados
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
@@ -31,7 +29,7 @@ if($db) {
   $nrows  = mysqli_num_rows($result);
    for($i=0; $i<$nrows; $i++)
    {
-     $tuple[$i] = mysqli_fetch_array($result,MYSQLI_BOTH);
+     $tuple[$i] = mysqli_fetch_array($result);
    }
  
   // faz a atribuição das variáveis do template smarty
@@ -42,7 +40,7 @@ if($db) {
   $smarty->assign('Welcome',"Welcome Bruno Serro");
 
   // Mostra a tabela
-  $smarty->display('templates_c/index_template.tpl');
+  $smarty->display('index_template.tpl');
   
   // fechar a ligação à base de dados
   mysqli_close($db);
